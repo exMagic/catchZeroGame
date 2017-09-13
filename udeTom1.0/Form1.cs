@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace udeTom1._0
@@ -28,23 +29,47 @@ namespace udeTom1._0
             int diffVal = suma1 - suma2;
             diff.Text = $"{diffVal}";
         }
-        bool load;
+        bool loaded =true;
         string inTmp;
         private void button1_Click(object sender, EventArgs e)
         {
-            inTmp = button1z.Text;
-            button1z.Text = tmp.Text;
-            tmp.Text = inTmp;
-            calculate();
+            if (loaded)
+            {
+                tmp.Text = button1z.Text;
+                button1z.Text = "";
+                button1z.BackColor = Color.Red;
+                loaded = false;
+            }
+            else
+            {
+                button1z.Text = tmp.Text;
+                
+                calculate();
+                loaded = true;
+                tmp.Text = "";
+                button1z.BackColor = Color.Gray;
+            }
            
         }
 
         private void button2z_Click(object sender, EventArgs e)
         {
-            inTmp = button2z.Text;
-            button2z.Text = tmp.Text;
-            tmp.Text = inTmp;
-            calculate();
+            if (loaded)
+            {
+                tmp.Text = button2z.Text;
+                button2z.Text = "";
+                button2z.BackColor = Color.Red;
+                loaded = false;
+            }
+            else
+            {
+                button2z.Text = tmp.Text;
+
+                calculate();
+                loaded = true;
+                tmp.Text = "";
+                button2z.BackColor = Color.Gray;
+            }
 
         }
 

@@ -51,10 +51,11 @@
             // button1z
             // 
             this.button1z.Location = new System.Drawing.Point(73, 69);
-            this.button1z.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1z.Margin = new System.Windows.Forms.Padding(2);
             this.button1z.Name = "button1z";
             this.button1z.Size = new System.Drawing.Size(53, 50);
             this.button1z.TabIndex = 0;
+            this.button1z.Text = "0";
             this.button1z.UseVisualStyleBackColor = true;
             this.button1z.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -63,9 +64,8 @@
             this.tmp.AutoSize = true;
             this.tmp.Location = new System.Drawing.Point(609, 25);
             this.tmp.Name = "tmp";
-            this.tmp.Size = new System.Drawing.Size(29, 31);
+            this.tmp.Size = new System.Drawing.Size(0, 31);
             this.tmp.TabIndex = 1;
-            this.tmp.Text = "0";
             // 
             // button2z
             // 
